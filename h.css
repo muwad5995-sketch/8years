@@ -1,0 +1,287 @@
+
+        :root {
+            --primary-color: #c78e44;
+            --secondary-color: #ebd8bf;
+            --accent-color: #38242f;
+            --text-color: #333;
+            --bg-color: #fff9fb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(240, 178, 127, 0.4), rgba(65, 30, 2, 0.4));
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: cursive;
+            text-shadow: 0px 0px 20px rgba(156, 91, 5, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .heart-decoration {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            z-index: 1;
+            transform: rotate(45deg);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .heart-decoration:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .heart-decoration:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 65%;
+            right: 10%;
+            animation-delay: 1s;
+        }
+
+        .heart-decoration:nth-child(3) {
+            width: 70px;
+            height: 70px;
+            bottom: 10%;
+            left: 50%;
+            animation-delay: 2s;
+        }
+
+        .heart-decoration:nth-child(4) {
+            width: 70px;
+            height: 70px;
+            bottom: 15%;
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .heart-decoration:nth-child(5) {
+            width: 150px;
+            height: 150px;
+            bottom: 50%;
+            left: 10%;
+            animation-delay: 2s;
+        }
+
+        .heart-decoration:nth-child(6) {
+            width: 90px;
+            height: 90px;
+            bottom: 40%;
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .heart-decoration:nth-child(7) {
+            width: 100px;
+            height: 100px;
+            top: 40%;
+            right: 10%;
+            animation-delay: 1s;
+        }
+
+        .heart-decoration:nth-child(8) {
+            width: 90px;
+            height: 90px;
+            top: 65%;
+            right: 30%;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: rotate(45deg) translateY(0);
+            }
+            50% {
+                transform: rotate(45deg) translateY(-20px);
+            }
+        }
+
+        /* Distance Visualization */
+        .distance-section {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .distance-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .distance-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            -webkit-text-stroke: 1px #c0a88b;
+        }
+
+        .distance-bridge {
+            height: 4px;
+            background: linear-gradient(90deg, transparent, white, transparent);
+            width: 80%;
+            margin: 30px auto;
+            position: relative;
+            border-radius: 2px;
+        }
+
+        .distance-you,
+        .distance-partner {
+            position: absolute;
+            font-size: 3rem;
+            animation: moveCloser 1.5s infinite ease-in-out;
+            transition: all 0.5s ease;
+        }
+
+        .distance-you {
+            left: 15%;
+            top: -40px;
+        }
+
+        .distance-partner {
+            right: 15%;
+            top: -40px;
+        }
+
+        @keyframes moveCloser {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-15px) scale(1.1);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .distance-days {
+            font-size: 2.2rem;
+            margin-top: 20px;
+            font-weight: bold;
+            -webkit-text-stroke: 1px #c0a88b;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .distance-title {
+                font-size: 1.8rem;
+            }
+            
+            .distance-you,
+            .distance-partner {
+                font-size: 2.5rem;
+            }
+            
+            .distance-days {
+                font-size: 1.8rem;
+            }
+            
+            .heart-decoration {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .distance-section {
+                padding: 25px;
+                margin: 20px 0;
+            }
+            
+            .distance-title {
+                font-size: 1.5rem;
+            }
+            
+            .distance-you,
+            .distance-partner {
+                font-size: 2rem;
+            }
+            
+            .distance-days {
+                font-size: 1.5rem;
+            }
+        }
+    

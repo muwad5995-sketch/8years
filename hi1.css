@@ -1,0 +1,232 @@
+:root {
+    --primary-color: #c78e44;
+    --secondary-color: #ebd8bf;
+    --accent-color: #38242f;
+    --text-color: #333;
+    --bg-color: #fff9fb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* body { */
+    /* background-color: rgba(240, 178, 127, 0.671);
+    background: linear-gradient(165deg, rgba(240, 178, 127, 0.671), rgba(65, 30, 2, 0.671));
+    color: var(--text-color);
+    overflow-x: hidden;
+    line-height: 1.6;
+     background-image: url("C:\Users\mutha\OneDrive\Documents\New folder hi\❤️\front.jpg");
+}*/
+body {
+  background-image: url("https://media.istockphoto.com/id/803150324/photo/oasis-landscape-sunset.jpg?s=612x612&w=0&k=20&c=Dk4418sy9n4lu8AA-IDlUD5D6lkLchKAFDuIXyRb6Nc=");  /* Set the image */
+  background-repeat: no-repeat;             /* Prevent tiling */
+  background-size: cover;                   /* Cover entire screen */
+  background-position: center;              /* Center the image */
+  background-attachment: fixed;             /* Keep fixed while scrolling */
+  height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgb(51, 38, 20);
+    font-family: cursive;
+    font-style: italic;
+    text-shadow: 0px 0px 20px rgb(156, 91, 5);
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: rgb(46, 40, 32);
+    text-shadow: 5px 5px 20px rgb(0, 0, 0);
+
+}
+
+.heart-decoration {
+    position: absolute;
+    background: rgba(32, 31, 32, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    transform: rotate(45deg);
+    animation: float 6s infinite ease-in-out;
+}
+
+.heart-decoration:nth-child(1) {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.heart-decoration:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 65%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.heart-decoration:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    bottom: 10%;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.heart-decoration:nth-child(4) {
+    width: 70px;
+    height: 70px;
+    bottom: 15%;
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.heart-decoration:nth-child(5) {
+    width: 150px;
+    height: 150px;
+    bottom: 50%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.heart-decoration:nth-child(6) {
+    width: 90px;
+    height: 90px;
+    bottom: 40%;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.heart-decoration:nth-child(7) {
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.heart-decoration:nth-child(8) {
+    width: 90px;
+    height: 90px;
+    top: 65%;
+    right: 30%;
+    animation-delay: 1s;
+}
+
+
+
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: rotate(45deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(45deg) translateY(-20px);
+    }
+}
+
+/* Distance Visualization */
+.distance-section {
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 40px 0;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.distance-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.distance-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    text-shadow:10px 5px 5px #5c4528;
+    /* -webkit-text-stroke: 1px #c0a88b; */
+    /* text-box: 10px 10px 10px blue; */
+}
+
+.distance-bridge {
+    height: 5px;
+    background-color: white;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+.distance-you,
+        .distance-partner {
+            position: absolute;
+            font-size: 70px;
+            animation: moveCloser 1s infinite ease-in-out;
+            transition: top 0.5s ease;
+        }
+
+.distance-you {
+    left: 15%;
+    top: -30px;
+}
+
+.distance-partner {
+    right: 15%;
+    top: -30px;
+}
+
+
+
+@keyframes moveCloser {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.distance-days {
+    font-size: 2rem;
+    margin-top: 20px;
+    font-weight: bold;
+    /* -webkit-text-stroke: 1px #c0a88b; */
+        text-shadow:10px 5px 5px #5c4528;
+
+}
